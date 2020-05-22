@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="sidebar">
+        
+        <div class="btn">
+            <span class="fas fa-bars"></span>
+        </div>
+
+        <div class="text"> side menu</div>
+        <ul>
+            <li> 
+                <a href="#" class="btn_1">Tieu De <span class="fas fa-caret-down first"></span></a>
+                
+                <ul class="show">
+                    <li><a href="#"> mục con 1</a></li>
+                    <li><a href="#"> mục con 2</a></li>
+                </ul>
+              </li>
+              <li> 
+                <a class="btn_2" href="#" >Tieu De  <span class="fas fa-caret-down two"></span</a>
+                <ul class="show_one">
+                    <li><a href="#"> mục con 1</a></li>
+                    <li><a href="#"> mục con 2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    $('.btn').click(function(){
+       $(this).toggleClass("click");
+       $('.sidebar').toggleClass("show_sidebar");
+    });
+    $('.btn_1').click(function(){
+       console.log($('.btn_1'));
+       $('.show').toggleClass("showclass");
+       $('.first').toggleClass("rotate");
+    });
+    $('.btn_2').click(function(){
+     $('.show_one').toggleClass("showclass");
+     $('.two').toggleClass("rotate");
+    });
+</script>
+</html>
